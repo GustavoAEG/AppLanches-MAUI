@@ -35,7 +35,7 @@
 
                 <Entry Placeholder="Telefone"
                      Keyboard="Telephone"
-                x:Name="EntTelefone"/>
+                x:Name="EntPhone"/>
 
                 <Entry Placeholder="Password"
                      IsPassword="True"
