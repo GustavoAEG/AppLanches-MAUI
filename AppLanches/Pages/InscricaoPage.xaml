@@ -49,7 +49,7 @@
         FontSize="Medium"
         BackgroundColor="DarkRed"
         x:Name="BtnSignup"
-        Clicked="BtnSignup_Clicked"/>
+        Clicked="BtnSignup_ClickedAsync"/>
 
         <HorizontalStackLayout Grid.Row="4"
                                Spacing="2" HorizontalOptions="Center"
@@ -58,7 +58,7 @@
             <Label Text="Já possui uma conta?"/>
             <Label Text="Entre aqui" TextColor="Red" FontAttributes="Bold">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer x:Name="TapLogin" Tapped="TapLogin_Tapped"/>
+                    <TapGestureRecognizer x:Name="TapLogin" Tapped="TapLogin_TappedAsync"/>
                 </Label.GestureRecognizers>
             </Label>
 

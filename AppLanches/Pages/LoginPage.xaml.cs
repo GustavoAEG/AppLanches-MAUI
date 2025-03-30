@@ -11,13 +11,34 @@ public partial class LoginPage : ContentPage
         _apiservice = apiservice;
     }
 
-    private void BtnSignIn_Clicked(object sender, EventArgs e)
+    private async void BtnSignIn_Clicked(object sender, EventArgs e)
     {
+        if (string.IsNullOrEmpty(EntEmail.Text))
+        {
+            await DisplayAlert("Erro", "Informe o email", "Cancelar");
+            return;
+        }
 
+        if (string.IsNullOrEmpty(EntPassword.Text))
+        {
+            await DisplayAlert("Erro", "Informe a senha", "Cancelar");
+            return;
+        }
+
+        var response = await _apiservice.Login(EntEmail.Text, EntPassword.Text);
+
+        if (!response.HasError)
+        {
+            Application.Current!.MainPage = new AppShell();
+        }
+        else
+        {
+            await DisplayAlert("Erro", "Algo deu errado", "Cancelar");
+        }
     }
 
-    private void TapRegister_Tapped(object sender, TappedEventArgs e)
+    private async void TapRegister_Tapped(object sender, TappedEventArgs e)
     {
-
+        await Navigation.PushAsync(new InscricaoPage(_apiservice));
     }
 }

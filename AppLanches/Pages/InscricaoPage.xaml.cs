@@ -32,13 +32,4 @@ public partial class InscricaoPage : ContentPage
         await Navigation.PushAsync(new LoginPage(_apiservice));
     }
 
-    private void BtnSignup_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void TapLogin_Tapped(object sender, TappedEventArgs e)
-    {
-
-    }
 }
