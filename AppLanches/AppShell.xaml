@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:AppLanches"
     xmlns:pages="clr-namespace:AppLanches.Pages"
     Shell.FlyoutBehavior="Disabled"
-    Shell.TabBarBackgroundColor="FloralWhite"
+    Shell.TabBarBackgroundColor="WhiteSmoke"
     Shell.TabBarTitleColor="Red"
     Shell.TabBarUnselectedColor="IndianRed"
     Title="Home">
@@ -14,8 +14,15 @@
     <TabBar>
         <Tab Title="Home" Icon="home">
             <ShellContent ContentTemplate="{DataTemplate pages:HomePage}"/>
-            
-            
+        </Tab>
+        <Tab Title="Carrinho" Icon="cart">
+            <ShellContent ContentTemplate="{DataTemplate pages:CarrinhoPage}"/>
+        </Tab>
+        <Tab Title="Favoritos" Icon="heart">
+            <ShellContent ContentTemplate="{DataTemplate pages:FavoritosPage}"/>
+        </Tab>
+        <Tab Title="Perfil" Icon="profile">
+            <ShellContent ContentTemplate="{DataTemplate pages:PerfilPage}"/>
         </Tab>
     </TabBar>
 
