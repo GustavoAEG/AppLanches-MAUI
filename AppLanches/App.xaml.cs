@@ -18,7 +18,7 @@ namespace AppLanches
         }
         private void SetMainPage()
         {
-            var acessToken = Preferences.Get("accessToken", string.Empty);
+            var acessToken = Preferences.Get("accesstoken", string.Empty);
 
             if (string.IsNullOrEmpty(acessToken))
             {

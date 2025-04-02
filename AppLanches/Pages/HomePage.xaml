@@ -3,10 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppLanches.Pages.HomePage"
              Title="HomePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Home Page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,3*,Auto,4*"
+          RowSpacing="18"
+          Margin="15">
+
+        <VerticalStackLayout Grid.Row="0"  Spacing="3">
+            <Label x:Name="LblNomeUsuario"
+                   FontSize="Large" />
+            <Label Text="Boa Noite!"
+                   FontAttributes="Bold"
+                   TextColor="#a90409"
+                   FontSize="Subtitle" />
+        </VerticalStackLayout>
+
+        <Label Text="Categorias"
+               Grid.Row="1"
+               TextColor="#a90409"
+               FontAttributes="Bold"
+               FontSize="Medium" />
+
+    
+
+
+    </Grid>
 </ContentPage>

@@ -10,6 +10,8 @@
     Shell.TabBarTitleColor="Red"
     Shell.TabBarUnselectedColor="IndianRed"
     Title="Home">
+    
+    
 
     <TabBar>
         <Tab Title="Home" Icon="home">
