@@ -25,7 +25,7 @@ namespace AppLanches
                 MainPage = new NavigationPage(new LoginPage(_apiservice,_validator));
                 return;
             }
-            MainPage = new AppShell();
+            MainPage = new AppShell(_apiservice,_validator);
         }
     }
 }

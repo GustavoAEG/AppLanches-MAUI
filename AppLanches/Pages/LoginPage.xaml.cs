@@ -32,7 +32,7 @@ public partial class LoginPage : ContentPage
 
         if (!response.HasError)
         {
-            Application.Current!.MainPage = new AppShell();
+            Application.Current!.MainPage = new AppShell(_apiservice, _validator);
         }
         else
         {
