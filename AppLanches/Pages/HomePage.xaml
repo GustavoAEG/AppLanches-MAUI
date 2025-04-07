@@ -24,6 +24,7 @@
         <CollectionView Grid.Row="2"
                         x:Name="CvCategorias"
                         SelectionMode="Single"
+                        SelectionChanged="CvCategorias_SelectionChanged"
                        >
 
             <CollectionView.ItemsLayout>
