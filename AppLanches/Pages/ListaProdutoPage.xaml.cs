@@ -56,4 +56,17 @@ public partial class ListaProdutoPage : ContentPage
         await Navigation.PushAsync(new LoginPage(_apiService, _validator));
     }
 
+    private void CvProdutos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        var currentSelection = e.CurrentSelection.FirstOrDefault() as Produto;
+
+        if (currentSelection != null)
+
+            return;
+
+        Navigation.PushAsync(new ProdutoDetalhesPage(currentSelection.Id,
+            currentSelection.Nome!,
+            _apiService,
+            _validator));
+    }
 }
