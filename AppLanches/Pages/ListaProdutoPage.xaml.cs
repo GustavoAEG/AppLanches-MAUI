@@ -60,7 +60,7 @@ public partial class ListaProdutoPage : ContentPage
     {
         var currentSelection = e.CurrentSelection.FirstOrDefault() as Produto;
 
-        if (currentSelection != null)
+        if (currentSelection == null)
 
             return;
 

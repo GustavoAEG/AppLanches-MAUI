@@ -16,6 +16,38 @@ public partial class ProdutoDetalhesPage : ContentPage
         this.apiService = apiService;
         _validator = validator;
         _produtoId = produtoId;
+        Title = produtoNome ?? "Detalhe do Produto";
+
+    }
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await GetProdutoDetalhes(_produtoId);
+    }
+
+    private async Task GetProdutoDetalhes(int produtoId)
+    {
+        throw new NotImplementedException();
+    }
+
+    private void ImagemBtnFavorito_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void BtnRemove_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void BtnAdiciona_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void BtnIncluirNoCarrinho_Clicked(object sender, EventArgs e)
+    {
 
     }
 }
